@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Wolrdld</title>
+</head>
+<body>
+
+        <div class="variable-expression">
+            <p style="color:red" th:text="${userbla.name}"></p>
+            <p style="color:red" th:text="${userbla.id}"></p>
+        </div>
+
+        <div class="selection-expression" th:object="${userbla}">
+            <p th:text="*{id}"> : id</p>
+            <p th:text="*{name}"> : Name</p>
+            <p th:text="*{email}"> : email</p>
+            <p th:text="*{password}"> : password</p>
+            <p th:text="*{role}"> : role</p>
+        </div>
+
+        <h1 th:text="#{mes}"></h1>
+</body>
+</html>

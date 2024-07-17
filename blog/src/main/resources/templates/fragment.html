@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragment</title>
+</head>
+<body>
+<h1>Fragment Expressions Demo:</h1>
+<br>
+
+<!-- Einfügen des Header-Fragments -->
+<div th:replace="~{common/header :: headerf}">
+    <p>blabalbabababab</p>
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!</p>
+</div>
+
+<!-- Einfügen des Footer-Fragments mit zusätzlichem Inhalt -->
+<div>
+    <div th:insert="~{common/footer :: footerf}"></div>
+    <p>last element</p>
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!</p>
+</div>
+
+<div>
+    <div th:include="~{common/footer :: footerf}"></div>
+    <p>!!!!!!!last element</p>
+    <p>!!!!!!!!!!!!!!!!!!!!!!!!</p>
+</div>
+</body>
+</html>

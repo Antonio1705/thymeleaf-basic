@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">>
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Condition</title>
+</head>
+<body>
+    <h1>Thymeleaf switch case demo</h1>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td   th:text="${user.id}"></td>
+            <td   th:text="${user.name}"></td>
+            <td   th:text="${user.email}"></td>
+            <td   th:switch="${user.role}">
+                <p th:case="Azubi">Es Ist ein azubi</p>
+                <p th:case="ProductOwner">Es Ist ein ProductOwner</p>
+            </td>
+            <td    th:text="${user.password}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

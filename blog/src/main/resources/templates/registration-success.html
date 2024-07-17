@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Success</title>
+</head>
+<body>
+<h1>Congratulations, you have successfully registered</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>Profession</th>
+        <th>Address</th>
+        <th>Married</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:object="${userform}">
+        <td   th:text="${userform.id}"></td>
+        <td   th:text="${userform.name}"></td>
+        <td   th:text="${userform.email}"></td>
+        <td   th:text="${userform.password}"></td>
+        <td    th:text="${userform.gender}"></td>
+
+
+        <td    th:text="${userform.profession}"></td>
+        <td    th:text="${userform.address}"></td>
+        <td    th:text="${userform.married}"></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
